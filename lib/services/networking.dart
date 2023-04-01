@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkHelper {
@@ -15,7 +16,9 @@ class NetworkHelper {
       var decodedData = jsonDecode(data);
       return decodedData;
     } else {
-      print(response.statusCode);
+      if (kDebugMode) {
+        print('this is ${response.statusCode}');
+      }
     }
   }
 }
