@@ -3,6 +3,7 @@ import 'package:clima/utilities/constants.dart';
 import 'package:clima/services/weather.dart';
 import 'package:clima/screens/city_screen.dart';
 
+
 class LocationScreen extends StatefulWidget {
   const LocationScreen({Key? key, this.locationWeather}) : super(key: key);
 
