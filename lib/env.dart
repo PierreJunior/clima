@@ -1,7 +1,10 @@
+import 'package:envied/envied.dart';
+
+part 'env.g.dart';
+
+@Envied(path: 'config.env')
 abstract class Env {
   //API KEY
-  static const apiKey = String.fromEnvironment(
-    'API_KEY',
-    defaultValue: '',
-  );
+  @EnviedField(varName: 'API_KEY',obfuscate: true)
+  static final apikey = _Env.apikey;
 }
