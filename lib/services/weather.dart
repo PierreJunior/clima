@@ -2,7 +2,7 @@ import 'package:clima/services/location.dart';
 import 'package:clima/services/networking.dart';
 import 'package:clima/env.dart';
 
-String get apiKey => Env.apiKey;
+String get apiKey => Env.apikey;
 const openWeatherURL = 'https://api.openweathermap.org/data/2.5/weather';
 
 class WeatherModel {
@@ -15,7 +15,7 @@ class WeatherModel {
   }
 
   Future<dynamic> getLocation() async {
-    //ask for permission to locate user location and then gets the data
+    //ask for permission to locate user and then fetches the data
     Location currentLocation = Location();
     await currentLocation.getCurrentLocation();
 
