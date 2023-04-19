@@ -25,8 +25,8 @@ jobs:
           echo "::set-output name=new_version::$version"
 
       - name: Commit version changes
-        uses: stefanzweifel/git-auto-commit-action@v4.16.0
-        with:
-          commit_message: "Bump version to ${{ steps.increase_version.outputs.new_version }}"
-          commit_user_name: "GitHub Action"
-          branch: ${{ github.ref }}
+        run: |
+         git config --global user.name PierreJunior
+         git config --global user.email pierresangwa@gmail.com
+         git add pubspec.yaml
+         git commit -m "Bump version to ${{ steps.increase_version.outputs.new_version }}"
