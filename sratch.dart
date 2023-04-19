@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'dart:io';
 
 void main() {
   performTasks();
@@ -11,22 +11,19 @@ void performTasks() {
 }
 
 void task1() {
-  if (kDebugMode) {
-    print('Task 1 complete');
-  }
+  String result = 'task 1 data';
+  print('Task 1 complete');
 }
 
 void task2() {
   Duration time = const Duration(seconds: 3);
   Future.delayed(time, () {
-    if (kDebugMode) {
-      print('Task 2 complete');
-    }
+    String result = 'Task 2 data';
+    print('Task 2 complete');
   });
 }
 
 void task3() {
-  if (kDebugMode) {
-    print('Task 3 complete');
-  }
+  String result = 'task 3 data';
+  print('Task 3 complete');
 }
