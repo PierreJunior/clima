@@ -14,9 +14,9 @@ class Location {
           desiredAccuracy: LocationAccuracy.high);
       latitude = position.latitude;
       longitude = position.longitude;
-    } catch (e) {
+    } catch (error) {
       if (kDebugMode) {
-        print(e);
+        print(error);
       }
     }
   }
